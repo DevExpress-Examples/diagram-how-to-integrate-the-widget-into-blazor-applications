@@ -7,7 +7,7 @@
 This example illustrates a possible way to integrate the Diagram widget into Blazor applications. This can be done as follows:
 1. Create a new Blazor application using recommendations from the following topic: [Get started with ASP.NET Core Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/get-started?view=aspnetcore-3.1&tabs=visual-studio).
 2. Install the necessary DevExtreme and Diagram resources by following steps from the following help topic: [Getting Started with Diagram](https://js.devexpress.com/Documentation/Guide/Widgets/Diagram/Getting_Started_with_Diagram/).
-3. Register the resources from the previos step. In Blazor server applications, use the ```Pages/_Host.cshtml``` file's HEAD section. In Blazor WebAssembly, use the ```wwwroot/index.html``` file's HEAD section.
+3. Register the resources from the previous step. In Blazor server applications, use the ```Pages/_Host.cshtml``` file's HEAD section. In Blazor WebAssembly, use the ```wwwroot/index.html``` file's HEAD section.
 
 ```html
 <head>
