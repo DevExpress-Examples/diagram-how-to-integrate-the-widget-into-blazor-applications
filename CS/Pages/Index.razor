@@ -1,0 +1,12 @@
+﻿@page "/"
+
+@inject IJSRuntime JSRuntime
+
+<div id="diagram" style="height: 900px"></div>
+
+@code {
+    protected override void OnAfterRender(bool firstRender)
+    {
+        JSRuntime.InvokeAsync<object>("JsFunctions.InitDiagram");
+    }
+}
