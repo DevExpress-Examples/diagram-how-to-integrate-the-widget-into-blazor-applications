@@ -1,0 +1,82 @@
+﻿#sidebar {
+    min-width: 15rem;
+    max-width: 15rem;
+    transition: transform 0.1s ease-out;
+    height: 100%;
+    max-height: 100%;
+    display: block;
+    background: inherit;
+}
+
+.logo {
+    text-align: center;
+}
+
+::deep .menu.display-mobile {
+    margin-bottom: 2rem;
+}
+
+::deep .menu.display-iam {
+    margin-bottom: 2rem;
+}
+
+::deep .menu {
+    --dxbl-menu-bottom-left-border-radius: 0;
+    --dxbl-menu-bottom-right-border-radius: 0;
+    --dxbl-menu-top-left-border-radius: 0;
+    --dxbl-menu-top-right-border-radius: 0;
+
+    background-color: inherit;
+}
+
+    ::deep .menu .dxbl-menu-item-list {
+        gap: 0.5rem;
+    }
+
+::deep .menu-item {
+    color: var(--bs-white, #fff);
+}
+
+::deep .icon {
+    margin-left: 0.5rem;
+}
+
+::deep .home-icon {
+    --icon-mask-image: var(--icon-home-mask-image);
+}
+
+::deep .weather-icon {
+    --icon-mask-image: var(--icon-weather-mask-image);
+}
+
+::deep .counter-icon {
+    --icon-mask-image: var(--icon-counter-mask-image);
+}
+
+::deep .settings-icon {
+    --icon-mask-image: var(--icon-settings-mask-image);
+}
+
+::deep .log-in-icon {
+    --icon-mask-image: var(--icon-log-in-mask-image);
+}
+
+::deep .log-out-icon {
+    --icon-mask-image: var(--icon-log-out-mask-image);
+}
+
+::deep .user-icon {
+    --icon-mask-image: var(--icon-user-mask-image);
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: inherit;
+        max-width: inherit;
+        display: block;
+    }
+
+    .logo {
+        text-align: inherit;
+    }
+}
