@@ -61,7 +61,7 @@ This example illustrates a possible way to integrate the [Diagram widget](https:
         await base.OnAfterRenderAsync(firstRender);
     }
 ```
-5. Define you data model
+5. Define the data model
 
 ```csharp
 public class ProjectTask {
