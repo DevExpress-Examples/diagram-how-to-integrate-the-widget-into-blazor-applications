@@ -13,8 +13,3 @@
          },
      });
 }
-
-export async function changeDiagramDataSource(diagram, datasource) {
-    const projectTasks = !!dataSource ? dataSource : null;
-    diagram.import(projectTasks);
-}
