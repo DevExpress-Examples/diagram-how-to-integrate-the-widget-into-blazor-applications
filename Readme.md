@@ -43,11 +43,6 @@ This example illustrates a possible way to integrate the [Diagram widget](https:
          },
      });
 }
-
-export async function changeDiagramDataSource(diagram, datasource) {
-    const projectTasks = !!dataSource ? dataSource : null;
-    diagram.import(projectTasks);
-}
 ```
 
 4. Wrap the widget in the [DevExtremeDiagram.razor](.CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor) component.
