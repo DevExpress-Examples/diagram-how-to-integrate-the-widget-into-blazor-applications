@@ -25,7 +25,7 @@ This example illustrates a possible way to integrate the [Diagram widget](https:
 </head>
 ```
 
-3. Create the [DevExtremeDiagram.razor.js](.CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor.js) file and implement the logic to initialize the Diagram widget:
+3. Create the [DevExtremeDiagram.razor.js](CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor.js) file and implement the logic to initialize the Diagram widget:
 
 ```javascript
 ﻿export async function initializeDiagram(element, dataSource) {
@@ -45,7 +45,7 @@ This example illustrates a possible way to integrate the [Diagram widget](https:
 }
 ```
 
-4. Wrap the widget in the [DevExtremeDiagram.razor](.CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor) component.
+4. Wrap the widget in the [DevExtremeDiagram.razor](CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor) component.
 
 ```razor
 <div @ref="Diagram"></div>
@@ -80,11 +80,11 @@ public class ProjectTask {
 <!-- default file list --> 
 *Files to look at*:
 
-* [Diagram.razor](./CS/DiagramBlazorApp/Pages/Index.razor)
-* [DevExtremeDiagram.razor](.CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor)
-* [DevExtremeDiagram.razor.js](.CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor.js)
-* [ProjectTask.cs](.CS/DiagramBlazorApp/Model/ProjectTask.cs)
-* [App.razor](.CS/DiagramBlazorApp/Pages/App.razor)
+* [Diagram.razor](CS/DiagramBlazorApp/Pages/Index.razor)
+* [DevExtremeDiagram.razor](CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor)
+* [DevExtremeDiagram.razor.js](CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor.js)
+* [ProjectTask.cs](CS/DiagramBlazorApp/Model/ProjectTask.cs)
+* [App.razor](CS/DiagramBlazorApp/Pages/App.razor)
 <!-- default file list end -->
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
