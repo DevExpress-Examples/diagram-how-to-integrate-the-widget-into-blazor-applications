@@ -11,12 +11,12 @@ This example demonstrates how to integrate the [DevExtreme Diagram widget](https
 DevExtreme widgets require [DevExtreme scripts and stylesheets](https://js.devexpress.com/jQuery/Documentation/Guide/jQuery_Components/Add_DevExtreme_to_a_jQuery_Application/). You must register scripts in the following order:
 
 1. JQuery library (`https://code.jquery.com/jquery-3.5.1.min.js>`)
-2. Custom or component-specific (diagram) script (`https://cdn3.devexpress.com/jslib/25.1.3/js/dx-diagram.min.js`)
-3. Common DevExtreme script (`https://cdn3.devexpress.com/jslib/25.1.3/js/dx.all.js`)
+2. Custom or component-specific scripts, for example, diagram (`https://cdn3.devexpress.com/jslib/25.1.3/js/dx-diagram.min.js`)
+3. Base DevExtreme script (`https://cdn3.devexpress.com/jslib/25.1.3/js/dx.all.js`)
 
-The DevExpress Blazor [Resource Manager](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxResourceManager) automatically registers JQuery and common DevExtreme scripts if your project includes the *DevExpress.Blazor* package. However, component-specific or custom scripts are not applied. To load DevExtreme resources correctly, you must:
+The DevExpress Blazor [Resource Manager](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxResourceManager) automatically registers JQuery and common DevExtreme scripts if your project includes the *DevExpress.Blazor* package. To load component-specific DevExtreme resources correctly, you must:
 
-* Unregister JQuery and common DevExtreme scripts using the `DxResourceManager.RegisterScripts` method.
+* Unregister JQuery and base DevExtreme scripts using the `DxResourceManager.RegisterScripts` method.
 * Reference scripts in the `<head>` section of the [Components/App.razor](CS/DiagramBlazorApp/Components/App.razor) file.
 
 ```Razor
@@ -38,7 +38,7 @@ The DevExpress Blazor [Resource Manager](https://docs.devexpress.com/Blazor/DevE
 
 ### Implement a Wrapper
 
-Implement a Blazor component - DevExtreme Diagram wrapper. The wrapper consists of two files:
+Implement a Blazor component that wraps DevExtreme Diagram. The wrapper consists of two files:
 
 * [DevExtremeDiagram.razor.js](CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor.js) configures Diagram settings (binds the component to a data model defined in the [ProjectTask.cs](CS/DiagramBlazorApp/Model/ProjectTask.cs) file).
     ```javascript
@@ -76,7 +76,7 @@ Implement a Blazor component - DevExtreme Diagram wrapper. The wrapper consists 
 
 ### Render the Blazor component
 
-Use the wrapper as a regular Blazor component. The following code adds a `DevExtremeDiagram` wrapper to the page and binds it to data:
+Use the wrapper as a standard Blazor component. The following code adds a `DevExtremeDiagram` wrapper to the page and binds it to data:
 
 ```razor
 <DevExtremeDiagram DataSource="DataSource" />
