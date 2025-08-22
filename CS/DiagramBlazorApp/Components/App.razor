@@ -11,17 +11,19 @@
     <base href="/" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn3.devexpress.com/jslib/25.1.3/js/dx-diagram.min.js"></script>
-    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/25.1.3/css/dx-diagram.min.css">
-    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/25.1.3/css/dx.light.css">
     <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/25.1.3/js/dx.all.js"></script>
-    <link href=@AppendVersion("https://cdn3.devexpress.com/jslib/25.1.3/css/dx.fluent.blue.light.css") rel="stylesheet" />
     @DxResourceManager.RegisterTheme(ThemesService.ActiveTheme)
-    @DxResourceManager.RegisterScripts()
+    @DxResourceManager.RegisterScripts((config) => {
+        config.Unregister(CommonResources.JQueryJS);
+        config.Unregister(CommonResources.DevExtremeJS);
+    })
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/25.1.3/css/dx-diagram.min.css">
+    <link href=@AppendVersion("https://cdn3.devexpress.com/jslib/25.1.3/css/dx.fluent.blue.light.css") rel="stylesheet" />
     <link href=@AppendVersion("css/site.css") rel="stylesheet" />
     <link href=@AppendVersion("DiagramBlazorApp.styles.css") rel="stylesheet" />
     <HeadOutlet />
 </head>
-<body class="@(ThemesService.IsFluentActive ? "dxbl-theme-fluent" : null)">
+<body>
     <Routes />
     <script src="_framework/blazor.web.js"></script>
 </body>
