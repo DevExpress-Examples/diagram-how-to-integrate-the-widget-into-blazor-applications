@@ -1,0 +1,31 @@
+﻿﻿@using Microsoft.JSInterop
+@using DevExpress.Blazor
+@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+<div @ref="Diagram"></div>
+
+@code {
+    ElementReference Diagram { get; set; }
+    IJSObjectReference ClientModule { get; set; }
+    IJSObjectReference ClientDiagram { get; set; }
+
+    [Parameter]
+    public object DataSource { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender) {
+        if (firstRender) {
+            ClientModule = await JS.InvokeAsync<IJSObjectReference>("import", "./DevExtremeComponents/DevExtremeDiagram.razor.js");
+            ClientDiagram = await ClientModule.InvokeAsync<IJSObjectReference>("initializeDiagram", Diagram, DataSource);
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync() {
+        if (ClientDiagram != null)
+            await ClientDiagram.DisposeAsync();
+        if (ClientModule != null)
+            await ClientModule.DisposeAsync();
+    }
+}
+

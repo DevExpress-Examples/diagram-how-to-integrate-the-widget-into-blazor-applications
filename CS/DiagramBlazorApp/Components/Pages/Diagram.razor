@@ -1,0 +1,23 @@
+﻿@page "/"
+@page "/diagram"
+@using DiagramBlazorApp.DevExtremeComponents
+@using DiagramBlazorApp.Model
+@rendermode InteractiveServer
+
+<DevExtremeDiagram DataSource="DataSource" />
+
+@code {
+    List<ProjectTask> DataSource { get; set; }
+
+    protected override void OnInitialized() {
+        DataSource = new() {
+            new() { ID = 1, Task_Name = "Project Planning", Description = "Define project scope and goals" },
+            new() { ID = 2, Parent_ID = 1, Task_Name = "Requirement Analysis", Description = "Gather and document requirements" },
+            new() { ID = 3, Parent_ID = 1, Task_Name = "Resource Allocation", Description = "Assign team and resources" },
+            new() { ID = 4, Parent_ID = 2, Task_Name = "Design Specifications", Description = "Outline system design" },
+            new() { ID = 5, Parent_ID = 3, Task_Name = "Task Scheduling", Description = "Develop project timeline" },
+            new() { ID = 6, Parent_ID = 2, Task_Name = "Risk Assessment", Description = "Identify potential risks" },
+            new() { ID = 7, Parent_ID = 1, Task_Name = "Kick-off Meeting", Description = "Launch project with stakeholders" },
+        };
+    }
+}
