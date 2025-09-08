@@ -102,11 +102,11 @@ Use the wrapper as a standard Blazor component. The following code adds a `DevEx
 
 ## Files to Review
 
-* [Diagram.razor](CS/DiagramBlazorApp/Pages/Index.razor)
+* [Diagram.razor](CS/DiagramBlazorApp/Components/Pages/Index.razor)
 * [DevExtremeDiagram.razor](CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor)
 * [DevExtremeDiagram.razor.js](CS/DiagramBlazorApp/DevExtremeComponents/DevExtremeDiagram.razor.js)
 * [ProjectTask.cs](CS/DiagramBlazorApp/Model/ProjectTask.cs)
-* [App.razor](CS/DiagramBlazorApp/Pages/App.razor)
+* [App.razor](CS/DiagramBlazorApp/Components/Pages/App.razor)
 
 ## Documentation
 
@@ -126,3 +126,4 @@ Use the wrapper as a standard Blazor component. The following code adds a `DevEx
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
