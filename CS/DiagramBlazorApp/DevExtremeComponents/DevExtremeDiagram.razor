@@ -15,7 +15,6 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         if (firstRender) {
-            await JS.LoadDxResources();
             ClientModule = await JS.InvokeAsync<IJSObjectReference>("import", "./DevExtremeComponents/DevExtremeDiagram.razor.js");
             ClientDiagram = await ClientModule.InvokeAsync<IJSObjectReference>("initializeDiagram", Diagram, DataSource);
         }
@@ -23,10 +22,14 @@
     }
 
     async ValueTask IAsyncDisposable.DisposeAsync() {
-        if (ClientDiagram != null)
-            await ClientDiagram.DisposeAsync();
-        if (ClientModule != null)
-            await ClientModule.DisposeAsync();
+        try
+        {
+            if(ClientDiagram != null)
+                await ClientDiagram.DisposeAsync();
+            if(ClientModule != null)
+                await ClientModule.DisposeAsync();
+        }
+        catch(JSDisconnectedException){ }
     }
 }
 
