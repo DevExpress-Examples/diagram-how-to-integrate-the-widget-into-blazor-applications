@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "jquery": "3.x",
+    "devextreme-dist": "~25.2",
+    "devexpress-diagram": "~2.2"
+  }
+}
