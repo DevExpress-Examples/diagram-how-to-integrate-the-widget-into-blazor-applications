@@ -118,6 +118,7 @@ Use the wrapper as a standard Blazor component. The following code adds a `DevEx
 ## More Examples
 
 * [Blazor - Use DevExtreme Circular Gauge in a Blazor Application](https://github.com/DevExpress-Examples/blazor-use-devextreme-circular-gauge)
+* [Blazor - Use DevExtreme Slider in Blazor Applications](https://github.com/DevExpress-Examples/blazor-use-devextreme-slider)
 
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
@@ -126,5 +127,6 @@ Use the wrapper as a standard Blazor component. The following code adds a `DevEx
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
 
 
