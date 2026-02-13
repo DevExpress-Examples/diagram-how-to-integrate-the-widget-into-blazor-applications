@@ -64,7 +64,7 @@ protected override void OnAfterRender(bool firstRender)
 * [diagram-init.js](./CS/wwwroot/js/diagram-init.js)
 <!-- default file list end -->
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-use-devextreme-diagram&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-use-devextreme-diagram&~~~was_helpful=no)
 
