@@ -3,6 +3,14 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+CS/DiagramBlazorApp/wwwroot/*
+CS/DiagramBlazorApp/wwwroot/css/*
+!CS/DiagramBlazorApp/wwwroot/css
+!CS/DiagramBlazorApp/wwwroot/css/site.css
+!CS/DiagramBlazorApp/wwwroot/css/theme-bs.css
+!CS/DiagramBlazorApp/wwwroot/css/theme-fluent.css
+!CS/DiagramBlazorApp/wwwroot/favicon.ico
+
 # User-specific files
 *.suo
 *.user

@@ -1,4 +1,3 @@
-using DiagramBlazorApp.Services;
 using DiagramBlazorApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +9,6 @@ builder.Services.AddRazorComponents()
 builder.Services.AddDevExpressBlazor(options => {
     options.SizeMode = DevExpress.Blazor.SizeMode.Medium;
 });
-builder.Services.AddScoped<DxThemesService>();
 builder.Services.AddMvc();
 
 var app = builder.Build();

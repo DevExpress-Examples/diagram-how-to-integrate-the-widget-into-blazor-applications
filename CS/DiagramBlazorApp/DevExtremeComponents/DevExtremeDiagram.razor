@@ -22,10 +22,14 @@
     }
 
     async ValueTask IAsyncDisposable.DisposeAsync() {
-        if (ClientDiagram != null)
-            await ClientDiagram.DisposeAsync();
-        if (ClientModule != null)
-            await ClientModule.DisposeAsync();
+        try
+        {
+            if(ClientDiagram != null)
+                await ClientDiagram.DisposeAsync();
+            if(ClientModule != null)
+                await ClientModule.DisposeAsync();
+        }
+        catch(JSDisconnectedException){ }
     }
 }
 
