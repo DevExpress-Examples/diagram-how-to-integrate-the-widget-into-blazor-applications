@@ -14,11 +14,13 @@ This example adds the [DevExtreme Diagram widget](https://js.devexpress.com/jQue
 
 ### Register DevExtreme Resources
 
-DevExtreme widgets require the use of [DevExtreme scripts and stylesheets](https://js.devexpress.com/jQuery/Documentation/Guide/jQuery_Components/Add_DevExtreme_to_a_jQuery_Application/). You must register scripts in the following order:
+DevExtreme widgets require the use of [DevExtreme scripts and stylesheets](https://js.devexpress.com/jQuery/Documentation/Guide/jQuery_Components/Add_DevExtreme_to_a_jQuery_Application/#Local_Files). We recommend that you use [npm](https://js.devexpress.com/jQuery/Documentation/Guide/Common/Distribution_Channels/#npm) to incorporate DevExtreme into the application.
 
-1. JQuery library (`https://code.jquery.com/jquery-3.5.1.min.js>`)
-2. Custom or component-specific scripts, for example, diagram (`https://cdn3.devexpress.com/jslib/25.1.3/js/dx-diagram.min.js`)
-3. Base DevExtreme script (`https://cdn3.devexpress.com/jslib/25.1.3/js/dx.all.js`)
+You must register scripts in the following order:
+
+1. JQuery library ([jquery.min.js](/CS/DiagramBlazorApp/wwwroot/js/jquery.min.js))
+2. Custom or component-specific scripts, for example, diagram ([dx-diagram.min.js](/CS/DiagramBlazorApp/wwwroot/js/dx-diagram.min.js))
+3. Base DevExtreme script ([dx.all.js](/CS/DiagramBlazorApp/wwwroot/js/dx.all.js))
 
 The DevExpress Blazor [Resource Manager](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxResourceManager) automatically registers JQuery and standard DevExtreme scripts if your project includes the *DevExpress.Blazor* package. To load component-specific DevExtreme resources correctly, you must:
 
@@ -28,16 +30,17 @@ The DevExpress Blazor [Resource Manager](https://docs.devexpress.com/Blazor/DevE
 ```Razor
 <head>
     <!--...-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn3.devexpress.com/jslib/25.1.3/js/dx-diagram.min.js"></script>
-    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/25.1.3/js/dx.all.js"></script>
-    @DxResourceManager.RegisterTheme(ThemesService.ActiveTheme)
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/dx-diagram.min.js"></script>
+    <script type="text/javascript" src="/js/dx.all.js"></script>
+    @DxResourceManager.RegisterTheme(Themes.Fluent)
     @DxResourceManager.RegisterScripts((config) => {
         config.Unregister(CommonResources.JQueryJS);
         config.Unregister(CommonResources.DevExtremeJS);
     })
-    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/25.1.3/css/dx-diagram.min.css">
-    <link href=@AppendVersion("https://cdn3.devexpress.com/jslib/25.1.3/css/dx.fluent.blue.light.css") rel="stylesheet" />
+    <link href=@AppendVersion("css/site.css") rel="stylesheet" />
+    <link href=@AppendVersion("css/dx.fluent.blue.light.css") rel="stylesheet" />
+    <link href=@AppendVersion("css/dx-diagram.min.css") rel="stylesheet" />
     <!--...-->
 </head>
 ```
